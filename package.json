@@ -20,11 +20,17 @@
   "homepage": "https://rubenvar.github.io",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel-plugin-clean-easy": "^1.0.2",
     "pug": "^3.0.0",
     "sass": "^1.30.0",
     "stylus": "^0.54.8"
   },
   "dependencies": {
     "axios": "^0.21.0"
-  }
+  },
+  "parcelCleanPaths": [
+    ".cache",
+    "dist",
+    "public"
+  ]
 }
