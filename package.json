@@ -1,7 +1,7 @@
 {
   "name": "rubenvar.github.io",
   "version": "1.0.0",
-  "description": "A Home for Some of my Projects in GitHub pages",
+  "description": "A Home for some of my projects in GitHub pages",
   "scripts": {
     "dev": "parcel index.pug --open",
     "build": "parcel build index.pug --out-dir public/ --public-url ./",
