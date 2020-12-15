@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,KACE,iEAGF,GACE,eAAA,CACA","file":"style.f55cb29e.css","sourceRoot":"..","sourcesContent":["body {\n  font-family: Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n}\n\nh1 {\n  margin: 0 0 46px;\n  padding: 0;\n}\n"]}

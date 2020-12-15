@@ -1,0 +1,43 @@
+:root
+  --br: 5px
+  --card-br: 15px
+  box-sizing: border-box
+*, ::before, ::after
+  box-sizing: inherit
+  padding: 0
+  margin: 0
+html
+  font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+  font-size: 18px
+main
+  width: 720px
+  max-width: calc(100% - 29px)
+  padding: 40px 14.5px
+  margin: 0 auto
+h1
+  margin-bottom: 46px
+  font-size: 2rem
+  text-align: center
+
+#projects
+  display: flex
+  flex-direction: column
+  gap: 20px
+  article
+    border: 1px solid
+    border-radius: var(--card-br)
+    padding: 12px
+    h2
+      font-size: 1.4rem
+    .meta
+      display: grid
+      grid-template-columns: 1fr 2fr
+      .tags
+        font-size: 0.9rem
+        display: flex
+        align-items: center
+        gap: 12px
+        span
+          background: lightgrey
+          padding: 2px 5px
+          border-radius: var(--br)

@@ -2,7 +2,7 @@
 
 Built with [Parcel](https://parceljs.org/).
 
-Written in [pug](https://pugjs.org/), [scss](https://sass-lang.com/) and vanilla JS. 🧙‍♂️ My favourites.
+Written in [pug](https://pugjs.org/), [stylus](https://stylus-lang.com/) and vanilla JS. 🧙‍♂️ My favourite.
 
 Hosted in GitHub pages.
 
