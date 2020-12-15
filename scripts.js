@@ -3,6 +3,8 @@ import axios from 'axios';
 const npmTitle = document.getElementById('npm-title');
 const npmContainer = document.getElementById('npm-packages');
 
+if (npmTitle && npmContainer) {
+
 function addToPage(arr) {
   let result = '';
   arr.forEach(obj => result += `<p><a href="${obj.package.links.npm}">${obj.package.name}</a></p>`);
@@ -18,3 +20,4 @@ axios
   }
 })
 .catch(err => console.error(err))
+}

@@ -1,3 +1,18 @@
+mixin card(link, title, tags, repo)
+  article
+    h2
+      a(href!=link)
+        | #{title}
+    block
+    .tags
+      each tag, i in tags
+        span(class!=tag.toLowerCase().replace(/[ \.]/, "")) #{tag}
+    if repo
+      .github
+        a(href!=repo)
+          include github
+
+
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -9,35 +24,37 @@ html(lang="en")
     main
       h1 A home for some of my projects
       #projects
-        article
-          h2
-            a(href="/bulk-color-converter/") Bulk HSL color converter
+        +card(
+          "/bulk-color-converter/",
+          "Bulk HSL color converter",
+          ["Pug", "SCSS", "Vanilla JS", "Parcel"],
+          "https://github.com/rubenvar/bulk-color-converter"
+        )
           p Written in pug, scss and vanilla JS. Built with Parcel.
-          .tags
-            span.pug Pug
-            span.sass SCSS
-            span.js Vanilla JS
-            span Parcel
-          .github
-            a(href="https://github.com/rubenvar/bulk-color-converter")
-              include github
-        article
-          h2
-            a(href="https://my-life-in-weeks.netlify.app/") My Life in Weeks
+        +card(
+          "https://my-life-in-weeks.netlify.app/",
+          "My Life in Weeks",
+          ["Svelte", "Rollup", "Netlify"],
+          "https://github.com/rubenvar/my-life-in-weeks"
+        )
           p A visual representation of your life, in weeks: Set your birth date and your expected life length.
           p Written in Svelte. Compiled with Rollup. Hosted on Netlify.
-          .tags
-            span.svelte Svelte
-            span Rollup
-            span.netlify Netlify
-          .github
-            a(href="https://github.com/rubenvar/my-life-in-weeks")
-              include github
-      #npm
+        +card(
+          "https://todohipo.com",
+          "todohipo.com",
+          ["Node.js", "Express", "Pug", "SCSS", "MongoDB", "Mongoose", "webpack"]
+        )
+          p A list of tips to get rid of hiccups 😅
+          p A full SPA built with Node.js and Express, storage in MongoDB, and compiled with webpack.
+      //- #npm
         h2 Y los 
           span#npm-title
           |  
           em packages 
           |que tengo publicados en npm
         #npm-packages
+    footer
+      .wrapper
+        p
+          a(href="https://github.com/rubenvar" target="_blank") Github
     script(src="scripts.js")
