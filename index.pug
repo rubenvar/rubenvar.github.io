@@ -13,25 +13,31 @@ html(lang="en")
           h2
             a(href="/bulk-color-converter/") Bulk HSL color converter
           p Written in pug, scss and vanilla JS. Built with Parcel.
-          .meta
-            p
-              a(href="https://github.com/rubenvar/bulk-color-converter")
-                include github
-            .tags
-              span Pug
-              span SCSS
-              span Vanilla JS
-              span Parcel
+          .tags
+            span.pug Pug
+            span.sass SCSS
+            span.js Vanilla JS
+            span Parcel
+          .github
+            a(href="https://github.com/rubenvar/bulk-color-converter")
+              include github
         article
           h2
             a(href="https://my-life-in-weeks.netlify.app/") My Life in Weeks
           p A visual representation of your life, in weeks: Set your birth date and your expected life length.
           p Written in Svelte. Compiled with Rollup. Hosted on Netlify.
-          .meta
-            p 
-              a(href="https://github.com/rubenvar/my-life-in-weeks")
-                include github
-            .tags
-              span Svelte
-              span Rollup
-              span Netlify
+          .tags
+            span.svelte Svelte
+            span Rollup
+            span.netlify Netlify
+          .github
+            a(href="https://github.com/rubenvar/my-life-in-weeks")
+              include github
+      #npm
+        h2 Y los 
+          span#npm-title
+          |  
+          em packages 
+          |que tengo publicados en npm
+        #npm-packages
+    script(src="scripts.js")
