@@ -1,0 +1,25 @@
+{
+  "name": "rubenvar.github.io",
+  "version": "1.0.0",
+  "description": "A Home for Some of my Projects in GitHub pages",
+  "scripts": {
+    "dev": "parcel index.pug --open",
+    "build": "parcel build index.pug --out-dir public/ --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenvar/rubenvar.github.io.git"
+  },
+  "keywords": [],
+  "author": "Rubén Vara <hey@rubenvara.io> (https://rubenvara.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubenvar/rubenvar.github.io/issues"
+  },
+  "homepage": "https://rubenvar.github.io",
+  "devDependencies": {
+    "pug": "^3.0.0",
+    "sass": "^1.30.0"
+  }
+}
