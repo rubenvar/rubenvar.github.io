@@ -2,6 +2,9 @@
   --accent #ffcf00
   --accent-light #ffdc44
   --secondary #345
+  --grey-dark #4a4a4a
+  --grey #a3a3a3
+  --grey-light #dadada
 
   --br 5px
   --card-br 15px
@@ -19,6 +22,8 @@
   --mongodb #13aa52
   --mongoose #880000
   --webpack #5299c7
+  --awslambda #ff9901
+  --digitalocean #0080ff
   box-sizing border-box
 *, ::before, ::after
   box-sizing inherit
@@ -26,14 +31,16 @@
   margin 0
 html
   font-family Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
-  font-size 18px
+  font-size 14px
+  @media screen and (min-width 720px)
+    font-size 18px
 main, .wrapper
   width 720px
   max-width calc(100% - 29px)
-  padding 40px 14.5px 120px
+  padding 40px 0 120px
   margin 0 auto
 h1
-  margin-bottom 70px
+  margin-bottom 4rem
   font-size 2rem
   text-align center
   color var(--secondary)
@@ -56,10 +63,16 @@ h1
       transform translateX(5px) translateY(-2.4px) rotate(-0.76deg) skewX(-3deg)
 a
   transition all 0.25s
+#view
+  margin 20px auto
 
 #projects
-  display flex
-  flex-direction column
+  &.list
+    display flex
+    flex-direction column
+  &.grid
+    display grid
+    grid-template-columns repeat(2, 1fr)
   gap 50px
   article
     border-radius var(--card-br)
@@ -68,7 +81,8 @@ a
     position relative
     h2
       font-size 1.4rem
-      margin-bottom 20px
+      margin-bottom 1.2rem
+      color var(--secondary)
       a
         text-decoration: none
         color var(--accent)
@@ -90,20 +104,38 @@ a
           color var(--accent-light)
           &::after
             transform translateX(-8px) translateY(0.6px) rotate(-2deg) skewX(3deg)
-    > p
-      margin-bottom 18px
-      color grey
+    p
+      margin-bottom 1rem
+      color var(--grey)
+    .tech
+      p.boss
+        cursor pointer
+        transition all 0.3s
+        display table
+        &[hidden]
+          display none
+        &:hover
+          color var(--grey-light)
+      p:not(.boss)
+        font-family monospace
+        font-size 0.9rem
+        line-height 1.3rem
+      &.hide
+        p:not(.boss)
+          display none
     .tags
-      margin-top 40px
-      font-size 0.8rem
+      margin-top 2.2rem
       display flex
+      flex-wrap wrap
       gap 12px
       span
         display flex
         gap 10px
         align-items center
         line-height 1
-        background lightgrey
+        font-size 0.7rem
+        background-color var(--grey-light)
+        color var(--grey-dark)
         padding 4px 6px
         border-radius var(--br)
         &::before
@@ -148,43 +180,12 @@ a
         &.webpack
           &::before
             background-color: var(--webpack)
-
-        // &.vanillajs
-        //   background-color var(--vanillajs)
-        //   color var(--vanillajs-front)
-        // &.scss
-        //   background-color var(--scss)
-        //   color white
-        // &.pug
-        //   background-color var(--pug)
-        //   color white
-        // &.parcel
-        //   background-color var(--parcel)
-        //   color white
-        // &.svelte
-        //   background-color: var(--svelte)
-        //   color white
-        // &.rollup
-        //   background-color: var(--rollup)
-        //   color white
-        // &.netlify
-        //   background-color: var(--netlify)
-        //   color white
-        // &.nodejs
-        //   background-color: var(--nodejs)
-        //   color white
-        // &.express
-        //   background-color: var(--express)
-        //   color white
-        // &.mongodb
-        //   background-color: var(--mongodb)
-        //   color white
-        // &.mongoose
-        //   background-color: var(--mongoose)
-        //   color white
-        // &.webpack
-        //   background-color: var(--webpack)
-        //   color white
+        &.awslambda
+          &::before
+            background-color: var(--awslambda)
+        &.digitalocean
+          &::before
+            background-color: var(--digitalocean)
     .github
       position absolute
       top 18px
@@ -193,25 +194,29 @@ a
         justify-self: start
         line-height 0
         svg
-          height 35px
-          width 35px
-          background-color lightgrey
+          height 2rem
+          width 2rem
+          background-color var(--grey)
           stroke white
           border-radius 50%
           padding 4px
           transition all 0.3s
       &:hover
         svg
-          stroke grey
+          stroke var(--grey-light)
 
 footer
-  padding 40px 0
-  background-color var(--vanillajs-front)
+  padding 2.2rem 0 1.6rem
+  // background-color var(--vanillajs-front)
   text-align center
   .wrapper
     padding 0
     a
       text-decoration none
-      color var(--vanillajs)
+      color var(--secondary)
+      border-radius var(--br)
+      padding 2px 5px
+      line-height 1
       &:hover
-        color var(--vanillajs-front)
+        color var(--accent)
+        background-color var(--secondary)
