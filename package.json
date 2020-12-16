@@ -4,7 +4,7 @@
   "description": "A Home for some of my projects in GitHub pages",
   "scripts": {
     "dev": "parcel index.pug --open",
-    "build": "parcel build index.pug --out-dir docs/ --public-url ./",
+    "build": "parcel build index.pug --no-source-maps --out-dir docs/ --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

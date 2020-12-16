@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { doc } from 'prettier';
 
 const npmTitle = document.getElementById('npm-title');
 const npmContainer = document.getElementById('npm-packages');
