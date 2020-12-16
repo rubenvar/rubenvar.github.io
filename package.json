@@ -43,7 +43,7 @@
   "parcelCleanPaths": [
     ".cache",
     "dist",
-    "public"
+    "docs"
   ],
   "eslintConfig": {
     "extends": [
