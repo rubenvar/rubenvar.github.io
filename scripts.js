@@ -27,26 +27,10 @@ if (npmTitle && npmContainer) {
 }
 
 // show/hide tech info in cards
-const tech = document.getElementsByClassName('tech');
-function showHiddenTech(e) {
-  if (e.target.className === 'boss') {
-    e.target.parentNode.classList.remove('hide');
-    e.target.hidden = true;
-  }
-}
+const techTogglers = document.getElementsByClassName('tech-toggler');
 
-[...tech].forEach((div) => div.addEventListener('click', showHiddenTech));
-
-// toggle list/grid view
-const viewToggler = document.getElementById('view');
-const projects = document.getElementById('projects');
-let next = 'grid';
-function toggleView(e) {
-  const n = next;
-  const o = n === 'list' ? 'grid' : 'list';
-  projects.classList.add(n);
-  projects.classList.remove(o);
-  next = o;
-}
-
-viewToggler.addEventListener('click', toggleView);
+[...techTogglers].forEach((toggler) =>
+  toggler.addEventListener('click', (e) =>
+    e.target.parentNode.classList.toggle('show-tech')
+  )
+);

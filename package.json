@@ -1,23 +1,20 @@
 {
   "name": "rubenvar.github.io",
-  "version": "1.0.0",
-  "description": "A Home for some of my projects in GitHub pages",
+  "version": "2.0.1",
+  "description": "A Home for some of my projects",
   "scripts": {
     "dev": "parcel index.pug --open",
-    "build": "parcel build index.pug --no-source-maps --out-dir docs/ --public-url ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build index.pug --no-source-maps --out-dir docs/ --public-url ./"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rubenvar/rubenvar.github.io.git"
   },
-  "keywords": [],
   "author": "Rubén Vara <hey@rubenvara.io> (https://rubenvara.io)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rubenvar/rubenvar.github.io/issues"
-  },
   "homepage": "https://rubenvar.github.io",
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "cssnano": "^4.1.10",
@@ -36,9 +33,6 @@
     "pug": "^3.0.0",
     "sass": "^1.30.0",
     "stylus": "^0.54.8"
-  },
-  "dependencies": {
-    "axios": "^0.21.0"
   },
   "parcelCleanPaths": [
     ".cache",

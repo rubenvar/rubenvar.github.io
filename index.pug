@@ -1,18 +1,21 @@
-mixin card(link, title, tags, repo)
+mixin card(link, title, tags, repo, wip)
   article
-    h2
-      if link
-        a(href!=link target="_blank") #{title}
-      else
-        |#{title}
-    block
+    .text
+      h2
+        if link
+          a(href!=link target="_blank") #{title}
+        else
+          |#{title}
+        if wip
+          span.wip 🚧
+      block
+      if repo
+        .github
+          a(href!=repo target="_blank")
+            include github
     .tags
-      each tag, i in tags
+      each tag in tags
         span(class!=tag.toLowerCase().replace(/[ \.]/, "")) #{tag}
-    if repo
-      .github
-        a(href!=repo target="_blank")
-          include github
 
 
 <!DOCTYPE html>
@@ -25,52 +28,7 @@ html(lang="en")
   body
     main
       h1 A home for some of my projects
-      button#view Show Grid
-      #projects.list
-        +card(
-          "/bulk-color-converter/",
-          "Bulk HSL color converter",
-          ["Pug", "SCSS", "Vanilla JS", "Parcel"],
-          "https://github.com/rubenvar/bulk-color-converter"
-        )
-          p Written in pug, scss and vanilla JS. Built with Parcel.
-        +card(
-          "https://my-life-in-weeks.netlify.app/",
-          "My Life in Weeks",
-          ["Svelte", "Rollup", "Netlify"],
-          "https://github.com/rubenvar/my-life-in-weeks"
-        )
-          p A visual representation of your life, in weeks: Set your birth date and your expected life length.
-          .tech.hide
-            p.boss Read more...
-            .info
-              p Written in Svelte. Compiled with Rollup. Hosted on Netlify.
-        +card(
-          "https://todohipo.com",
-          "todohipo.com",
-          ["Node.js", "Express", "MongoDB", "Mongoose", "Pug", "SCSS", "webpack", "DigitalOcean"]
-        )
-          p A list of tips to get rid of hiccups 😅
-          .tech.hide
-            p.boss Read more...
-            .info
-              p A full SPA built with Node.js and Express on the backend.
-              p Data stored in MongoDB and managed with Mongoose.
-              p Frontend written in pug, SCSS, and vanilla JS. Compiled with webpack.
-              p Hosted on DigitalOcean.
-        +card(
-          "",
-          "Screen to Cloudinary",
-          ["AWS Lambda", "Node.js"],
-          "https://github.com/rubenvar/screen-to-cloudinary"
-        )
-          p A serverless function that screenshots a URL and saves it to Cloudinary.
-          .tech.hide
-            p.boss Read more...
-            .info
-              p An AWS Lambda Fuction written in Node.js
-              p It's called with a POST request through AWS API Gateway.
-              p Takes the screenshot with puppeteer.
+      #projects
         +card(
           "https://github.com/rubenvar/csv-reader#readme",
           "CSV Reader",
@@ -81,12 +39,59 @@ html(lang="en")
             a(href="https://chrome.google.com/webstore/detail/csv-reader/dnioinfbhmclclfdbcnlfgbojdpdicde" target="_blank") Chrome
             |, 
             a(href="https://addons.mozilla.org/en-US/firefox/addon/csv-reader/" target="_blank") Firefox
-            |) that transforms raw csv into a readable html table, in the same tab.
-          .tech.hide
-            p.boss Read more...
-            .info
-              p My first browser extension.
-              p Built originally for Firefox (it's what I use). As more people found it useful, I added the polyfill for promises and published it to Chrome.
+            |) that transforms raw csv into a readable html table, in the same tab
+          p.tech-toggler &#x25BC; Tech stuff
+          .tech
+            p My first browser extension.
+            p Built originally for Firefox (it's what I use). As more people found it useful, I added the polyfill for promises and published it to Chrome.
+        +card(
+          "https://my-life-in-weeks.netlify.app/",
+          "My Life in Weeks",
+          ["Svelte", "Rollup", "Netlify"],
+          "https://github.com/rubenvar/my-life-in-weeks",
+          true
+        )
+          p A visual representation of your life, in weeks
+          p Set your birth date and expected life length. Get how many weeks you have lived, and how many you have left
+          p.tech-toggler &#x25BC; Tech stuff
+          .tech
+            p Written in Svelte. Compiled with Rollup. Hosted on Netlify.
+        +card(
+          "https://rubenvar.github.io/bulk-color-converter/",
+          "Bulk HSL color converter",
+          ["Pug", "SCSS", "Vanilla JS", "Parcel"],
+          "https://github.com/rubenvar/bulk-color-converter",
+          true
+        )
+          p Paste a list of HEX color values and get a list of HSL color values
+          p.tech-toggler &#x25BC; Tech stuff
+          .tech
+            p Written in pug, scss and vanilla JS. Built with Parcel.
+        +card(
+          null,
+          "Screen to Cloudinary",
+          ["AWS Lambda", "Node.js"],
+          "https://github.com/rubenvar/screen-to-cloudinary",
+          true
+        )
+          p A serverless function that screenshots a URL and saves it to Cloudinary
+          p.tech-toggler &#x25BC; Tech stuff
+          .tech
+            p An AWS Lambda Fuction written in Node.js
+            p It's called with a POST request through AWS API Gateway.
+            p Takes the screenshot with puppeteer.
+        +card(
+          "https://todohipo.com",
+          "todohipo.com",
+          ["Node.js", "Express", "MongoDB", "Mongoose", "Pug", "SCSS", "webpack", "DigitalOcean"]
+        )
+          p A list of tips to get rid of hiccups 😅
+          p.tech-toggler &#x25BC; Tech stuff
+          .tech
+            p A full SPA built with Node.js and Express on the backend.
+            p Data stored in MongoDB and managed with Mongoose.
+            p Frontend written in pug, SCSS, and vanilla JS. Compiled with webpack.
+            p Hosted on DigitalOcean.
       //- #npm
         h2 Y los 
           span#npm-title
@@ -98,8 +103,8 @@ html(lang="en")
       .wrapper
         p
           a(href="https://rubenvara.io/" target="_blank") rubenvara.io
-          |  &times; 
+          |  &#x25C7; 
           a(href="https://github.com/rubenvar" target="_blank") GitHub
-          |  &times; 
+          |  &#x25C7; 
           a(href="https://twitter.com/rubenvara01" target="_blank") Twitter
     script(src="scripts.js")

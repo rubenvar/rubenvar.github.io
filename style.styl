@@ -24,7 +24,9 @@
   --webpack #5299c7
   --awslambda #ff9901
   --digitalocean #0080ff
+  
   box-sizing border-box
+
 *, ::before, ::after
   box-sizing inherit
   padding 0
@@ -67,66 +69,89 @@ a
   margin 20px auto
 
 #projects
-  &.list
-    display flex
-    flex-direction column
-  &.grid
-    display grid
-    grid-template-columns repeat(2, 1fr)
+  display flex
+  flex-direction column
   gap 50px
   article
     border-radius var(--card-br)
     padding 18px
     box-shadow 0 1px 23px 0px rgba(0,0,0,0.21), 0 0 5px 0px rgba(0,0,0,0.13)
     position relative
-    h2
-      font-size 1.4rem
-      margin-bottom 1.2rem
-      color var(--secondary)
-      a
-        text-decoration: none
-        color var(--accent)
-        position relative
-        &::after
-          transition all 0.3s
-          content ''
-          display block
-          width 105%
-          height 120%
-          top 0
-          left 0
-          transform translateX(-5px) translateY(-2.4px) rotate(1.23deg) skewX(-2deg)
-          background-color var(--secondary)
-          position absolute
-          border-radius 3px
-          z-index -1
-        &:hover
-          color var(--accent-light)
+    display grid
+    grid-template-columns 4fr 1fr
+    transition all 0.5s
+    .text
+      h2
+        font-size 1.4rem
+        margin-bottom 1.2rem
+        color var(--secondary)
+        .wip
+          margin-left 0.75rem
+        a
+          text-decoration: none
+          color var(--accent)
+          position relative
           &::after
-            transform translateX(-8px) translateY(0.6px) rotate(-2deg) skewX(3deg)
-    p
-      margin-bottom 1rem
-      color var(--grey)
-    .tech
-      p.boss
+            transition all 0.3s
+            content ''
+            display block
+            width 105%
+            height 120%
+            top 0
+            left 0
+            transform translateX(-8px) translateY(-2.4px) rotate(1.23deg) skewX(-2deg)
+            background-color var(--secondary)
+            position absolute
+            border-radius 3px
+            z-index -1
+          &:hover
+            color var(--accent-light)
+            &::after
+              transform translateX(-8px) translateY(0.6px) rotate(-2deg) skewX(3deg)
+      p
+        margin-bottom 1rem
+        color var(--grey)
+        line-height 1.6546576543rem
+      .tech-toggler
         cursor pointer
         transition all 0.3s
-        display table
-        &[hidden]
-          display none
+        font-family monospace
         &:hover
           color var(--grey-light)
-      p:not(.boss)
-        font-family monospace
-        font-size 0.9rem
-        line-height 1.3rem
-      &.hide
-        p:not(.boss)
-          display none
+      .tech
+        padding-left 1rem
+        display none
+        opacity 0
+        p
+          font-family monospace
+          font-size 0.9rem
+          line-height 1.3rem
+      &.show-tech
+        .tech
+          display block
+          opacity 1
+      .github
+        a
+          justify-self: start
+          line-height 0
+          svg
+            height 2rem
+            width 2rem
+            background-color var(--grey)
+            stroke white
+            border-radius 50%
+            padding 4px
+            transition all 0.3s
+        &:hover
+          svg
+            stroke var(--grey-light)
     .tags
-      margin-top 2.2rem
+      // margin-top 2.2rem
       display flex
       flex-wrap wrap
+      flex-direction column
+      justify-content flex-start
+      align-items flex-end
       gap 12px
       span
         display flex
@@ -186,28 +211,9 @@ a
         &.digitalocean
           &::before
             background-color: var(--digitalocean)
-    .github
-      position absolute
-      top 18px
-      right 18px
-      a
-        justify-self: start
-        line-height 0
-        svg
-          height 2rem
-          width 2rem
-          background-color var(--grey)
-          stroke white
-          border-radius 50%
-          padding 4px
-          transition all 0.3s
-      &:hover
-        svg
-          stroke var(--grey-light)
 
 footer
   padding 2.2rem 0 1.6rem
-  // background-color var(--vanillajs-front)
   text-align center
   .wrapper
     padding 0
