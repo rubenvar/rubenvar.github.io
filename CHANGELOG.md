@@ -2,6 +2,16 @@
 
 All notable changes to this porject will be documented in this file.
 
+## [2.0.2] - 2021-03-07
+
+### Added
+
+- Added the GitHub link SVG on the top right corner.
+
+### Changed
+
+- MLIW is not a WIP anymore.
+
 ## [2.0.1] - 2020-12-21
 
 ### Changed
