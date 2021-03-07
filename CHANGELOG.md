@@ -2,7 +2,7 @@
 
 All notable changes to this porject will be documented in this file.
 
-## [2.0.2] - 2021-03-07
+## [2.1.0] - 2021-03-07
 
 ### Added
 
@@ -10,6 +10,7 @@ All notable changes to this porject will be documented in this file.
 
 ### Changed
 
+- Changed folder structure: all main files in `/src`.
 - MLIW is not a WIP anymore.
 
 ## [2.0.1] - 2020-12-21
