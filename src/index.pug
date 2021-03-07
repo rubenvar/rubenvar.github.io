@@ -12,7 +12,7 @@ mixin card(link, title, tags, repo, wip)
       if repo
         .github
           a(href!=repo target="_blank")
-            include github
+            include githubLogo
     .tags
       each tag in tags
         span(class!=tag.toLowerCase().replace(/[ \.]/, "")) #{tag}
@@ -107,4 +107,5 @@ html(lang="en")
           a(href="https://github.com/rubenvar" target="_blank") GitHub
           |  &#x25C7; 
           a(href="https://twitter.com/rubenvara01" target="_blank") Twitter
+      include githubCorner
     script(src="scripts.js")
