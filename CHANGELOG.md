@@ -2,6 +2,12 @@
 
 All notable changes to this porject will be documented in this file.
 
+## [2.2.1] - 2021-03-22
+
+### Fixed
+
+- Actually build the thing... 🤦‍♂️.
+
 ## [2.2.0] - 2021-03-22
 
 ### Changed
