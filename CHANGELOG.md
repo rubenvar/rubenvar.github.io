@@ -2,6 +2,13 @@
 
 All notable changes to this porject will be documented in this file.
 
+## [2.2.0] - 2021-03-22
+
+### Changed
+
+- Bulk HSL converter is not a WIP anymore.
+- Update to Parcel v2✨.
+
 ## [2.1.0] - 2021-03-07
 
 ### Added
