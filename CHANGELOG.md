@@ -2,6 +2,12 @@
 
 All notable changes to this porject will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- Readme tweak.
+
 ## [2.2.1] - 2021-03-22
 
 ### Fixed
