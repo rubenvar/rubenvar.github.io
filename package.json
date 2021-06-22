@@ -1,6 +1,6 @@
 {
   "name": "rubenvar.github.io",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A Home for some of my projects",
   "scripts": {
     "dev": "parcel serve src/index.pug --open",

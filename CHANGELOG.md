@@ -4,8 +4,11 @@ All notable changes to this porject will be documented in this file.
 
 ## [Unreleased]
 
+## [2.2.2] - 2021-06-22
+
 ### Changed
 
+- Try to fix dependency alerts.
 - Readme tweak.
 
 ## [2.2.1] - 2021-03-22
