@@ -4,6 +4,13 @@ All notable changes to this porject will be documented in this file.
 
 ## [Unreleased]
 
+## [2.2.3] - 2022-02-14
+
+### Changed
+
+- Updated to Parcel 2.
+- Commented npm querying scripts (for now).
+
 ## [2.2.2] - 2021-06-22
 
 ### Changed
