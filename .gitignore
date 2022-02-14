@@ -4,7 +4,6 @@
 node_modules/
 # parcel
 .parcel-cache/
-.cache/
 dist/
 #
 DOCS.md
