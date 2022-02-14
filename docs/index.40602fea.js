@@ -1,0 +1,1 @@
+[...document.getElementsByClassName("tech-toggler")].forEach((e=>e.addEventListener("click",(e=>e.target.parentNode.classList.toggle("show-tech")))));
