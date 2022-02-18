@@ -4,6 +4,11 @@ All notable changes to this porject will be documented in this file.
 
 ## [Unreleased]
 
+## [2.2.4] - 2022-02-18
+
+- Updated dependencies.
+- Updated parcel to fix error.
+
 ## [2.2.3] - 2022-02-14
 
 ### Changed
