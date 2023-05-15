@@ -4,6 +4,12 @@ All notable changes to this porject will be documented in this file.
 
 ## [Unreleased]
 
+- Add new project: "active app".
+- Add `release-it`.
+- Add some tech colors.
+- Tweak card title styling.
+- Update dependencies.
+
 ## [2.2.4] - 2022-02-18
 
 - Updated dependencies.
