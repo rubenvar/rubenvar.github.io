@@ -56,6 +56,18 @@ html(lang="en")
           .tech
             p Written in Svelte. Compiled with Rollup. Hosted on Netlify.
         +card(
+          "https://active-ten.vercel.app/",
+          "active app",
+          ["SolidJS", "IndexedDB", "JSX", "Vite"],
+          "https://github.com/rubenvar/active"
+        )
+          p An activity tracker within an interactive calendar
+          p Log your activities and hobbies, and get a nice monthly view of your daily life, plus useful stats
+          p.tech-toggler &#x25BC; Tech stuff
+          .tech
+            p Built with React, using SolidJS to practice it. Hosted on Vercel.
+            p All data is kept in-browser using the localStorage and IndexedDB APIs.
+        +card(
           "https://rubenvar.github.io/bulk-color-converter/",
           "Bulk HSL color converter",
           ["Pug", "SCSS", "Vanilla JS", "Parcel"],
