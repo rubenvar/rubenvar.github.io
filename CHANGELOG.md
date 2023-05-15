@@ -4,6 +4,8 @@ All notable changes to this porject will be documented in this file.
 
 ## [Unreleased]
 
+## [2.3.0] - 2023-05-16
+
 - Add new project: "active app".
 - Add `release-it`.
 - Add some tech colors.
