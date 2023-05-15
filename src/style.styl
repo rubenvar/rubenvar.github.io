@@ -24,6 +24,10 @@
   --webpack #5299c7
   --awslambda #ff9901
   --digitalocean #0080ff
+  --indexeddb #000
+  --solidjs #446b9e
+  --jsx #8a53a6
+  --vite #646cff
   
   box-sizing border-box
 
@@ -95,10 +99,10 @@ a
             transition all 0.3s
             content ''
             display block
-            width 105%
+            width 110%
             height 120%
             top 0
-            left 0
+            left -2px
             transform translateX(-8px) translateY(-2.4px) rotate(1.23deg) skewX(-2deg)
             background-color var(--secondary)
             position absolute
@@ -211,6 +215,18 @@ a
         &.digitalocean
           &::before
             background-color: var(--digitalocean)
+        &.indexeddb
+          &::before
+            background-color: var(--indexeddb)
+        &.solidjs
+          &::before
+            background-color: var(--solidjs)
+        &.jsx
+          &::before
+            background-color: var(--jsx)
+        &.vite
+          &::before
+            background-color: var(--vite)
 
 footer
   padding 2.2rem 0 1.6rem
